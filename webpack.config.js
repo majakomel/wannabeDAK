@@ -19,11 +19,12 @@ module.exports = {
     extensions: ["*", ".js", ".jsx"],
   },
   output: {
-    path: path.resolve(__dirname, "./docs"),
+    path: path.resolve(__dirname, "./dist"),
     filename: "bundle.js",
   },
   devServer: {
     static: path.resolve(__dirname, "./dist"),
     hot: true,
+    historyApiFallback: true,
   },
 };
